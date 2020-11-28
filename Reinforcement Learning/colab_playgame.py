@@ -109,8 +109,8 @@ def DrawSquare(board):
     turtle.initializeTurtle()
     turtle.speed(10)
     turtle.penup()
-    xi = -350
-    y = 100
+    xi = 0
+    y = 0
     x = xi
     boardState = np.reshape(board, (3, 3))
     for iRow in range(boardDimension):
