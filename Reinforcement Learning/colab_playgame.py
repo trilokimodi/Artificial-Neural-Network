@@ -130,7 +130,7 @@ def DrawSquare(board):
                 turtle.forward(50)
                 turtle.left(90)
             turtle.penup()
-        y -= 60
+        y += 60
         x = xi
 
 filePath1 = "/content/Artificial-Neural-Network/Reinforcement Learning/HW3_Task4_Player1.csv"
