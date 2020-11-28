@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import csv
-from ColabTurtle.Turtle import *
+import ColabTurtle.Turtle as turtle
 
 def fn_check_state(current_state, player_number):
     flagState = 1
@@ -107,7 +107,7 @@ def fn_update_without_reward(previous_state_location, current_state_location, ac
 
 def DrawSquare(board):
     initializeTurtle()
-    # turtle.speed(100)
+    turtle.speed(100)
     turtle.pensize(1)
     turtle.penup()
     xi = -350
