@@ -116,19 +116,19 @@ def DrawSquare(board):
     for iRow in range(boardDimension):
         for iCol in range(boardDimension):
             if boardState[iRow][iCol] == 1:
-                turtle.color("black", "red")
+                turtle.color("black")
+                turtle.bgcolor("red")
             elif boardState[iRow][iCol] == -1:
-                turtle.color("black", "blue")
+                turtle.color("black")
+                turtle.bgcolor("blue")
             else:
-                turtle.color("black", "white")
-            turtle.begin_fill()
+                turtle.color("black")
             x += 60
             turtle.goto(x, y)
             turtle.pendown()
             for i in range(4):
                 turtle.forward(50)
                 turtle.left(90)
-            turtle.end_fill()
             turtle.penup()
         y -= 60
         x = xi
