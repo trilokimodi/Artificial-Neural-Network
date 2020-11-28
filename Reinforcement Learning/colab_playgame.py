@@ -258,6 +258,7 @@ if whoStarts == 0:
         availableLocations = baseIndexArray[0][availableLocationsBoolean[0]]
         print("availableLocations = ", end="")
         print(availableLocations)
+        DrawSquare(board)
         optimalActionLocation = int(input("Enter your location in 0 to 9\n"))
         while optimalActionLocation not in availableLocations:
             optimalActionLocation = int(input("Enter among the free and possible positions\n"))
@@ -281,6 +282,7 @@ else:
         availableLocations = baseIndexArray[0][availableLocationsBoolean[0]]
         print("availableLocations = ", end="")
         print(availableLocations)
+        DrawSquare(board)
         optimalActionLocation = int(input("Enter your location in 0 to 9\n"))
         while optimalActionLocation not in availableLocations:
             optimalActionLocation = int(input("Enter among the free and possible positions\n"))
