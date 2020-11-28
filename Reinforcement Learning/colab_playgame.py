@@ -106,7 +106,7 @@ def fn_update_without_reward(previous_state_location, current_state_location, ac
                             qMatrixPlayer2[previous_state_location][0][action_location])
 
 def DrawSquare(board):
-    initializeTurtle()
+    turtle.initializeTurtle()
     turtle.speed(100)
     turtle.pensize(1)
     turtle.penup()
