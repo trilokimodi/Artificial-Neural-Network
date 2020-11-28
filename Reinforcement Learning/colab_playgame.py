@@ -106,11 +106,10 @@ def fn_update_without_reward(previous_state_location, current_state_location, ac
                             qMatrixPlayer2[previous_state_location][0][action_location])
 
 def DrawSquare(board):
-    game = ColabTurtle.Turtle
-    game.initializeTurtle()
-    game.turtle.speed(100)
-    game.turtle.pensize(1)
-    game.turtle.penup()
+    initializeTurtle()
+    turtle.speed(100)
+    turtle.pensize(1)
+    turtle.penup()
     xi = -350
     y = 100
     x = xi
@@ -118,20 +117,20 @@ def DrawSquare(board):
     for iRow in range(boardDimension):
         for iCol in range(boardDimension):
             if boardState[iRow][iCol] == 1:
-                game.turtle.color("black", "red")
+                turtle.color("black", "red")
             elif boardState[iRow][iCol] == -1:
-                game.turtle.color("black", "blue")
+                turtle.color("black", "blue")
             else:
-                game.turtle.color("black", "white")
-            game.turtle.begin_fill()
+                turtle.color("black", "white")
+            turtle.begin_fill()
             x += 60
-            game.turtle.goto(x, y)
-            game.turtle.pendown()
+            turtle.goto(x, y)
+            turtle.pendown()
             for i in range(4):
-                game.turtle.forward(50)
-                game.turtle.left(90)
-            game.turtle.end_fill()
-            game.turtle.penup()
+                turtle.forward(50)
+                turtle.left(90)
+            turtle.end_fill()
+            turtle.penup()
         y -= 60
         x = xi
 
