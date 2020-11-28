@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import csv
+import ColabTurtle
 
 def fn_check_state(current_state, player_number):
     flagState = 1
@@ -104,6 +105,35 @@ def fn_update_without_reward(previous_state_location, current_state_location, ac
             learningRate * (qMatrixPlayer2[current_state_location][0][maxAction] -
                             qMatrixPlayer2[previous_state_location][0][action_location])
 
+def DrawSquare(board):
+    game = ColabTurtle.Turtle
+    game.initializeTurtle()
+    game.turtle.speed(100)
+    game.turtle.pensize(1)
+    game.turtle.penup()
+    xi = -350
+    y = 100
+    x = xi
+    boardState = np.reshape(board, (3, 3))
+    for iRow in range(boardDimension):
+        for iCol in range(boardDimension):
+            if boardState[iRow][iCol] == 1:
+                game.turtle.color("black", "red")
+            elif boardState[iRow][iCol] == -1:
+                game.turtle.color("black", "blue")
+            else:
+                game.turtle.color("black", "white")
+            game.turtle.begin_fill()
+            x += 60
+            game.turtle.goto(x, y)
+            game.turtle.pendown()
+            for i in range(4):
+                game.turtle.forward(50)
+                game.turtle.left(90)
+            game.turtle.end_fill()
+            game.turtle.penup()
+        y -= 60
+        x = xi
 
 filePath1 = "/content/Artificial-Neural-Network/Reinforcement Learning/HW3_Task4_Player1.csv"
 filePath2 = "/content/Artificial-Neural-Network/Reinforcement Learning/HW3_Task4_Player2.csv"
@@ -294,3 +324,4 @@ else:
             print(np.reshape(board, (boardDimension, boardDimension)))
             print("Draw!! We shared equal pie")
             break
+
