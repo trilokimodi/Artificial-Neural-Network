@@ -1,7 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import csv
-import ColabTurtle.Turtle as turtle
+# import ColabTurtle as turtle
+from ColabTurtle import *
 
 def fn_check_state(current_state, player_number):
     flagState = 1
@@ -106,9 +107,9 @@ def fn_update_without_reward(previous_state_location, current_state_location, ac
                             qMatrixPlayer2[previous_state_location][0][action_location])
 
 def DrawSquare(board):
-    turtle.initializeTurtle()
-    turtle.speed(10)
-    turtle.penup()
+    initializeTurtle()
+    speed(10)
+    penup()
     xi = 0
     y = 0
     x = xi
@@ -116,20 +117,20 @@ def DrawSquare(board):
     for iRow in range(boardDimension):
         for iCol in range(boardDimension):
             if boardState[iRow][iCol] == 1:
-                turtle.color("black")
-                turtle.bgcolor("red")
+                color("black")
+                bgcolor("red")
             elif boardState[iRow][iCol] == -1:
-                turtle.color("black")
-                turtle.bgcolor("blue")
+                color("black")
+                bgcolor("blue")
             else:
-                turtle.color("black")
+                color("black")
             x += 60
-            turtle.goto(x, y)
-            turtle.pendown()
+            goto(x, y)
+            pendown()
             for i in range(4):
-                turtle.forward(50)
-                turtle.left(90)
-            turtle.penup()
+                forward(50)
+                left(90)
+            penup()
         y += 60
         x = xi
 
