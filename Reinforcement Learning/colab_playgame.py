@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import csv
 # import ColabTurtle as turtle
-from ColabTurtle import *
+from ColabTurtle.Turtle import *
 
 def fn_check_state(current_state, player_number):
     flagState = 1
