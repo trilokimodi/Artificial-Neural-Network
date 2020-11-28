@@ -107,7 +107,7 @@ def fn_update_without_reward(previous_state_location, current_state_location, ac
 
 def DrawSquare(board):
     initializeTurtle()
-    turtle.speed(100)
+    # turtle.speed(100)
     turtle.pensize(1)
     turtle.penup()
     xi = -350
