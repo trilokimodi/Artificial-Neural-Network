@@ -1,4 +1,5 @@
 from ColabTurtle.Turtle import *
+import numpy as np
 
 def DrawSquare(board):
     initializeTurtle()  # Initialize the turtle graphics environment
