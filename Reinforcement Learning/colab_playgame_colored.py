@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import csv
 
+%matplotlib inline
+
 def on_click(event, matrix, playerValue, fig, ax, returnPos):
     if event.inaxes == ax:
         col = int(event.xdata)
