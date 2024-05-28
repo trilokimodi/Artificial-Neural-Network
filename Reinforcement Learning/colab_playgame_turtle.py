@@ -215,6 +215,7 @@ whoWon = 0
 whoLost = 0
 gameStatus = 0
 moveNumber = 0
+initializeTurtle()
 
 print("Tossing a coin, head implies you start and tails implies AI starts")
 whoStarts = np.random.randint(0, 2, 1)
