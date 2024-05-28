@@ -3,7 +3,7 @@ import numpy as np
 
 def DrawSquare(board):
     initializeTurtle()  # Initialize the turtle graphics environment
-    
+    boardDimension = 3
     speed(10)  # Set the drawing speed
     penup()  # Lift the pen
     xi = 0
