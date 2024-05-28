@@ -133,6 +133,7 @@ def DrawSquare(board):
             penup()
         y += 60
         x = xi
+        done()
 
 filePath1 = "/content/Artificial-Neural-Network/Reinforcement Learning/HW3_Task4_Player1.csv"
 filePath2 = "/content/Artificial-Neural-Network/Reinforcement Learning/HW3_Task4_Player2.csv"
