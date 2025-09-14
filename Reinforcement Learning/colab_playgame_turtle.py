@@ -68,7 +68,7 @@ def check_game_status(current_state):
 
 
 def fn_optimal_action_location(matrix_location, player_number):
-    maxQ = np.NINF
+    maxQ = -np.inf
     jLoc = 0
     if player_number == 1:
         for iLocation in range(boardDimension ** 2):
